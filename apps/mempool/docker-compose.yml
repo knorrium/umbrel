@@ -51,7 +51,6 @@ services:
     stop_grace_period: 1m
     volumes:
       - ${APP_DATA_DIR}/mysql/data:/var/lib/mysql
-      - ${APP_DATA_DIR}/mysql/db-scripts:/docker-entrypoint-initdb.d
     environment:
       MYSQL_DATABASE: "mempool"
       MYSQL_USER: "mempool"
