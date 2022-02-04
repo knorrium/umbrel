@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   web:
-    image: mempool/frontend:v2.3.1@sha256:38c955caeb58014b266904b059bfabbdab8321d20b11e7cccb139be6dfc8e36e
+    image: knorrium/frontend:v2.4.0-tor1
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -17,7 +17,7 @@ services:
       default:
         ipv4_address: $APP_MEMPOOL_IP
   api:
-    image: mempool/backend:v2.3.1@sha256:f7b16a6b00ea8aabf3b71a34ec05bb373fa0b6f1d31c7981b767edb2d1b7cf89
+    image: knorrium/backend:v2.4.0-tor1
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -41,6 +41,9 @@ services:
       MEMPOOL_HTTP_PORT: "8999"
       MEMPOOL_CACHE_DIR: "/backend/cache"
       MEMPOOL_CLEAR_PROTECTION_MINUTES: "20"
+      SOCKS5PROXY_ENABLED: "true"
+      SOCKS5PROXY_HOST: $TOR_PROXY_IP
+      SOCKS5PROXY_PORT: $TOR_PROXY_PORT
     networks:
        default:
          ipv4_address: $APP_MEMPOOL_API_IP
