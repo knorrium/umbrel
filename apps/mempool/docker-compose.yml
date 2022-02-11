@@ -44,6 +44,7 @@ services:
       SOCKS5PROXY_ENABLED: "true"
       SOCKS5PROXY_HOST: $TOR_PROXY_IP
       SOCKS5PROXY_PORT: $TOR_PROXY_PORT
+      MEMPOOL_INDEXING_BLOCKS_AMOUNT: "-1"
     networks:
        default:
          ipv4_address: $APP_MEMPOOL_API_IP
