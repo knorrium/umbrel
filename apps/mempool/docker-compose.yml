@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   web:
-    image: knorrium/frontend:v2.4.0-blocks1
+    image: knorrium/frontend:latest
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -17,7 +17,7 @@ services:
       default:
         ipv4_address: $APP_MEMPOOL_IP
   api:
-    image: knorrium/backend:v2.4.0-blocks1
+    image: knorrium/backend:latest
     user: "1000:1000"
     init: true
     restart: on-failure
