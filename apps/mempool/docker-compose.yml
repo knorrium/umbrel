@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   web:
-    image: knorrium/frontend:latest
+    image: mempool/frontend:v2.4.0-alpha1@sha256:3103132694434541f667158e125049aaaddcc540076252aeeba187fbb8beae22
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -17,7 +17,7 @@ services:
       default:
         ipv4_address: $APP_MEMPOOL_IP
   api:
-    image: knorrium/backend:latest
+    image: mempool/backend:v2.4.0-alpha1@sha256:7b2c3580d95daaab705c6f56a791307ff40f151cfcb41512993871f85d7248aa
     user: "1000:1000"
     init: true
     restart: on-failure
