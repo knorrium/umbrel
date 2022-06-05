@@ -17,7 +17,7 @@ services:
       default:
         ipv4_address: $APP_MEMPOOL_IP
   api:
-    image: mempool/backend:v2.4.0-alpha1@sha256:b83425e0a8cd85749237ea6d035afd7100c97a8b09717f48d5b895547c545625
+    image: mempool/backend:v2.4.0-alpha2@sha256:b83425e0a8cd85749237ea6d035afd7100c97a8b09717f48d5b895547c545625
     user: "1000:1000"
     init: true
     restart: on-failure
